@@ -22,7 +22,7 @@ export default function Html({ assets, children, title }) {
             __html: `<b>Enable JavaScript to run this app.</b>`
           }}
         />
-        {children}
+        <div id="root">{children}</div>
         <script
           dangerouslySetInnerHTML={{
             __html: `assetManifest = ${JSON.stringify(assets)};`

@@ -32,8 +32,8 @@
     "start:prod": "concurrently \"npm run server:prod\" \"npm run bundler:prod\"",
     "server:dev": "cross-env NODE_ENV=development nodemon -- server/server.js",
     "server:prod": "cross-env NODE_ENV=production nodemon -- server/server.js",
-    "bundler:dev": "cross-env NODE_ENV=development nodemon -- scripts/build.js",
-    "bundler:prod": "cross-env NODE_ENV=production nodemon -- scripts/build.js"
+    "bundler:dev": "cross-env NODE_ENV=development NODE_OPTIONS=--openssl-legacy-provider nodemon -- scripts/build.js",
+    "bundler:prod": "cross-env NODE_ENV=production NODE_OPTIONS=--openssl-legacy-provider nodemon -- scripts/build.js"
   },
   "babel": {
     "presets": [

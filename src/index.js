@@ -7,6 +7,12 @@
  */
 
 import { hydrateRoot } from "react-dom/client";
-import App from "./App";
+import { DataProvider } from "./data";
+import { AppContent } from "./App";
 
-hydrateRoot(document, <App assets={window.assetManifest} />);
+hydrateRoot(
+  document.getElementById("root"),
+  <DataProvider data={null}>
+    <AppContent />
+  </DataProvider>
+);
